@@ -506,12 +506,12 @@ export default function Work() {
         
         {/* Modal Container */}
         <div 
-          className={`relative w-full max-w-4xl border border-[var(--neural-cyan)] bg-[var(--surface)] shadow-[0_0_50px_rgba(0,240,255,0.15)] transition-all duration-500 flex flex-col ${
+          className={`relative w-full max-w-4xl max-h-[90dvh] border border-[var(--neural-cyan)] bg-[var(--surface)] shadow-[0_0_50px_rgba(0,240,255,0.15)] transition-all duration-500 flex flex-col ${
             isModalOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-10'
           }`}
         >
           {/* Mac-style Window Header */}
-          <div className="flex items-center gap-2 border-b border-[var(--neural-cyan)]/20 px-4 py-3 bg-black/40">
+          <div className="flex-shrink-0 flex items-center gap-2 border-b border-[var(--neural-cyan)]/20 px-4 py-3 bg-black/40 relative z-10">
             <button 
               onClick={closeModal}
               className="h-3.5 w-3.5 rounded-full bg-red-500/80 hover:bg-red-400 transition-colors flex items-center justify-center group cursor-pointer"
@@ -525,7 +525,7 @@ export default function Work() {
             </span>
           </div>
 
-          <div className="p-8 md:p-12 min-h-[400px] flex flex-col justify-center">
+          <div className="flex-1 overflow-y-auto p-6 md:p-12 min-h-[400px] flex flex-col justify-start md:justify-center">
             {modalBootPhase === 0 && (
               <div className="flex flex-col items-center justify-center font-mono text-sm text-[var(--neural-cyan)]">
                 <Terminal className="mb-4 h-8 w-8 animate-pulse" />
