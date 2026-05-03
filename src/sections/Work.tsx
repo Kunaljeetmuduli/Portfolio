@@ -185,10 +185,19 @@ export default function Work() {
 
   useEffect(() => {
     const timer = setTimeout(calculateLines, 500);
-    window.addEventListener('resize', calculateLines);
+    let lastWidth = window.innerWidth;
+    
+    const handleResize = () => {
+      if (window.innerWidth !== lastWidth) {
+        calculateLines();
+        lastWidth = window.innerWidth;
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', calculateLines);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -373,18 +382,18 @@ export default function Work() {
 
           <div ref={gridRef} className="relative z-10 grid gap-8 md:grid-cols-2">
             {PROJECTS.map((project, index) => (
-              <div key={project.number} className="project-card-wrapper opacity-0 h-full" style={{ perspective: '1000px' }}>
+              <div key={project.number} className="project-card-wrapper opacity-0 h-full perspective-1000">
                 <div
                   ref={(el) => { cardRefs.current[index] = el; }}
                   onClick={() => project.status !== 'coming_soon' ? openProjectModal(project) : null}
                   onMouseMove={(e) => project.status !== 'coming_soon' ? handleCardMouseMove(e, index) : null}
                   onMouseLeave={() => project.status !== 'coming_soon' ? handleCardMouseLeave(index) : null}
-                  className={`group relative h-full w-full overflow-hidden terminal-border bg-[var(--surface)]/80 p-8 transition-colors duration-500 ${
+                  className={`group relative h-full w-full overflow-hidden terminal-border bg-[var(--surface)]/80 p-8 transition-colors duration-500 preserve-3d ${
                     project.status === 'coming_soon'
                       ? 'opacity-60 cursor-not-allowed border-[var(--ghost-gray)]/20'
                       : 'hover:border-[var(--neural-cyan)] cursor-pointer'
                   }`}
-                  style={{ transformStyle: 'preserve-3d', transformOrigin: 'center center' }}
+                  style={{ transformOrigin: 'center center' }}
                 >
                   {/* Glare overlay */}
                   <div 

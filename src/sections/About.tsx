@@ -393,7 +393,7 @@ export default function About() {
 
         {/* Modal Container */}
         <div
-          className={`relative w-full max-w-5xl h-[85vh] flex flex-col border border-[var(--neural-cyan)] bg-[var(--surface)] p-1 shadow-[0_0_50px_rgba(0,240,255,0.15)] transition-all duration-500 ${isResumeModalOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-10'
+          className={`relative w-full max-w-5xl h-[85dvh] flex flex-col border border-[var(--neural-cyan)] bg-[var(--surface)] p-1 shadow-[0_0_50px_rgba(0,240,255,0.15)] transition-all duration-500 ${isResumeModalOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-10'
             }`}
         >
           {/* Close Button */}
