@@ -2,6 +2,8 @@
 
 A highly interactive, immersive, and visually stunning developer portfolio built with React, Vite, TailwindCSS, and GSAP. Designed with a sleek "Cyberpunk OS / Terminal" aesthetic to stand out and showcase projects dynamically.
 
+**🔴 Live Deployment:** [https://portfolio-rho-eight-nptmyfrzxo.vercel.app/](https://portfolio-rho-eight-nptmyfrzxo.vercel.app/)
+
 ![Portfolio Preview](https://portfolio-rho-eight-nptmyfrzxo.vercel.app/) <!-- Update this with an actual screenshot of the portfolio later -->
 
 ## 🚀 Features
