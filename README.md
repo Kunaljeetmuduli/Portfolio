@@ -4,8 +4,6 @@ A highly interactive, immersive, and visually stunning developer portfolio built
 
 **🔴 Live Deployment:** [https://portfolio-rho-eight-nptmyfrzxo.vercel.app/](https://portfolio-rho-eight-nptmyfrzxo.vercel.app/)
 
-![Portfolio Preview](https://portfolio-rho-eight-nptmyfrzxo.vercel.app/) <!-- Update this with an actual screenshot of the portfolio later -->
-
 ## 🚀 Features
 
 - **Immersive Boot Sequence**: A high-tech "Biometric Retina Scanner" animation using GSAP that transitions smoothly into the main site.
